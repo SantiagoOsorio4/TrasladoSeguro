@@ -24,9 +24,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Clientes[0].Address)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Clientes[0].Idservicio)
-            </th>
+            <th>Nombre del Servicio</th>
             <th>
                 @Html.DisplayNameFor(model => model.Clientes[0].PhoneNumber)
             </th>
@@ -62,8 +60,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                 </td>
 
             </tr>
