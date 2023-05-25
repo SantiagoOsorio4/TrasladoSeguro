@@ -11,7 +11,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.4.23259.3",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0-preview.4.23259.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-preview.4.23259.3",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.5"
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.4.23259.3"
         },
         "runtime": {
           "TrasladoSeguro.dll": {}
@@ -191,7 +191,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
+      "Microsoft.EntityFrameworkCore.Tools/8.0.0-preview.4.23259.3": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "8.0.0-preview.4.23259.3"
         }
@@ -731,12 +731,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/8.0.0-preview.4.23259.3",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.8.0.0-preview.4.23259.3.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
+    "Microsoft.EntityFrameworkCore.Tools/8.0.0-preview.4.23259.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OV/PUGBVSbQVd2daTeXoMBoao2qtfBgT2TuaYo48xRYUS2gH++f8OFiZc6zwASqkMKgs1/t5uVlxgKl18m/1Fw==",
-      "path": "microsoft.entityframeworkcore.tools/7.0.5",
-      "hashPath": "microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512"
+      "sha512": "sha512-Px4TLA/UShBT896Z6b3UfFA2ZBeSwMl+ukQGSS0RmhoHhKfM/g0l3BQZ+3Up1hvkMY9D6QfZU/qxgDk/a2rweQ==",
+      "path": "microsoft.entityframeworkcore.tools/8.0.0-preview.4.23259.3",
+      "hashPath": "microsoft.entityframeworkcore.tools.8.0.0-preview.4.23259.3.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/8.0.0-preview.4.23259.5": {
       "type": "package",

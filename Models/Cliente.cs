@@ -12,6 +12,6 @@ namespace TrasladoSeguro.Models
 		[EmailAddress]
 		public string? Email { get; set; }
 		public int? Idservicio { get; set; }
-		public virtual Servicio Servicio { get; set; }
+		public virtual Servicio? Servicio { get; set; }
     }
 }
