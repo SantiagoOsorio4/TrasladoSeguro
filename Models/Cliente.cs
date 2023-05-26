@@ -11,7 +11,13 @@ namespace TrasladoSeguro.Models
 		public string? PhoneNumber { get; set; }
 		[EmailAddress]
 		public string? Email { get; set; }
-		public int? Idservicio { get; set; }
+        public DateTime? Fecha { get; set; }
+
+
+        public int? ConductorId { get; set; }
+        public virtual Conductor? Conductor { get; set; }
+
+        public int? Idservicio { get; set; }
 		public virtual Servicio? Servicio { get; set; }
     }
 }
