@@ -45,7 +45,7 @@
             <div class="form-group">
                 <label asp-for="Clientes.Idservicio">Servicio:</label>
                 <select asp-for="Clientes.Idservicio" asp-items="@(new SelectList(Model.Servicios, "Idservicio", "Name"))" class="form-control">
-                    <option value="">Seleccione un servicio</option>
+                    <option value="">Selecciona uno de nuestros servicios</option>
                 </select>
                 <span asp-validation-for="Clientes.Idservicio" class="text-danger"></span>
             </div>
