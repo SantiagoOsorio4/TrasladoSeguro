@@ -8,19 +8,22 @@ namespace TrasladoSeguro.Pages.Clientes
 {
     public class IndexModel : PageModel
     {
-		private readonly TrasladoSeguroContext _context;
+        private readonly TrasladoSeguroContext _context;
 
-		public IndexModel(TrasladoSeguroContext context)
-		{
-			_context = context;
-		}
-		public IList<Cliente> Clientes { get; set; } = default!;
-		public async Task OnGetAsync()
-		{
-			if (_context.Clientes != null)
-			{
-				Clientes = await _context.Clientes.Include(c=> c.Servicio).ToListAsync();
-			}
-		}
-	}
+        public IndexModel(TrasladoSeguroContext context)
+        {
+            _context = context;
+        }
+
+        public List<Cliente> Clientes { get; set; }
+
+        public async Task OnGetAsync()
+        {
+            Clientes = await _context.Clientes
+                .Include(c => c.Conductor)
+                .Include(c => c.Servicio)
+                .ToListAsync();
+        }
+    }
 }
+
