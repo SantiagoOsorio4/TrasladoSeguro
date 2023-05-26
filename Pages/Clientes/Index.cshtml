@@ -26,6 +26,9 @@
                 <td>@cliente.Conductor?.Nombre</td>
                 <td>@cliente.FirstName</td>
                 <td>@cliente.Servicio.Name</td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@cliente.Id" class="btn btn-danger">Delete</a>
+                </td>
             </tr>
         }
     </tbody>
