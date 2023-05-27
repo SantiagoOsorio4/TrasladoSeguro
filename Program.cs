@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using TrasladoSeguro.Data;
 
@@ -13,7 +15,18 @@ namespace TrasladoSeguro
 			builder.Services.AddRazorPages();
 			builder.Services.AddDbContext<TrasladoSeguroContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TrasladoSeguroDB")));
 
-			var app = builder.Build();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "TrasladoSeguro";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.LoginPath = "/Login"; // Ruta a la página de inicio de sesión
+        options.AccessDeniedPath = "/AccesoDenegado"; // Ruta a la página de acceso denegado
+    });
+
+            builder.Services.AddAuthorization();
+
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -22,8 +35,10 @@ namespace TrasladoSeguro
 				// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 				app.UseHsts();
 			}
+            app.UseAuthentication();
+            app.UseAuthorization();
 
-			app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 			app.UseStaticFiles();
 
 			app.UseRouting();
